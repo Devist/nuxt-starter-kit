@@ -42,10 +42,36 @@ module.exports = {
     'nuxt-buefy',
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/pwa',
+    // '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt-community/dotenv-module
-    '@nuxtjs/dotenv'
+    '@nuxtjs/dotenv',
+    // 성능 최적화(파일 크기 줄이기) 때 사용
+    'nuxt-purgecss'
   ],
+  purgeCSS: {
+    enabled: false
+  },
+  // 성능 최적화(파일 크기 줄이기) 때 사용
+  // purgeCSS: {
+  //   mode: 'postcss',
+  //   enabled: process.env.NODE_ENV === 'production',
+  //   paths: [
+  //     'components/**/*.vue',
+  //     'layouts/**/*.vue',
+  //     'pages/**/*.vue',
+  //     'plugins/**/*.js'
+  //   ],
+  //   styleExtensions: ['.css'],
+  //   whitelist: ['body', 'html', 'nuxt-progress'],
+  //   whitelistPatterns: [/^b-/],
+  //   whitelistPatternsChildren: [/^tabs/, /^is-/, /^b-/, /^navbar/],
+  //   extractors: [
+  //     {
+  //       extractor: (content) => content.match(/[A-z0-9-:\\/]+/g) || [],
+  //       extensions: ['html', 'vue', 'js']
+  //     }
+  //   ]
+  // },
 
   /*
    ** Axios module configuration

@@ -44,6 +44,7 @@ View the full documentation at https://tailwindcss.com.
 
 module.exports = {
   important: true,
+  purge: false,
   // prefix: '',
   // separator: ':',
 
@@ -68,7 +69,7 @@ module.exports = {
       grey: '#b8c2cc',
       'grey-light': '#dae1e7',
       background: '#F9F9FF',
-      primary: '#414fff'
+      primary: 'red'
     },
 
     /*
